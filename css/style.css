@@ -68,8 +68,12 @@ header {
   padding-right: 20px;
   color: #262626;
 }
+.header__searchBox__searchInput:hover {
+  border: 1px solid rgba(26, 26, 26, 0.5);
+}
 .header__searchBox__searchInput:focus {
   width: 500px;
+  border: 1px solid #F22613;
   border-radius: 15px;
   padding: 10px 30px 10px 10px;
   background-color: transparent;
@@ -101,6 +105,9 @@ header {
 .header__userLinks {
   justify-self: end;
   display: flex;
+  padding-top: 5px;
+  height: 100%;
+  align-items: center;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
