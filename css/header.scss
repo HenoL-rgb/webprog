@@ -13,10 +13,13 @@ header {
     grid-template-columns: 100px 1fr 2fr 150px 100px;
     align-items: center;
     height: 60px;
+ 
+    
     &__links {
         position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
         width: 100%;
         height: 100%;
         justify-self: center;
@@ -130,6 +133,7 @@ header {
             background-color: #f0f2f2;
             border-radius: 20px;
             scale: 0;
+            z-index: 3;
             transform: translateY(40px);
             scale: 1;
             width: 70px;
@@ -140,3 +144,5 @@ header {
 
     }
 }
+
+

@@ -4,11 +4,32 @@
 		<title>Auction</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" href="./css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script defer src="./js/script.js"></script>
 	</head>
 	<body>
+		<div class="hamburger">
+			<div class="hamburger__links">
+				<a href="stats.html">
+					<div>Stats</div>
+				</a>
+				<a href="faq.html">
+					<div>FAQ</div>
+				</a>
+				<a href="about.html">
+					<div>About</div>
+				</a>
+				<div class="userLinks">
+					<a href="./search.html" class="searchLink">Search</a>
+					<a href="#"><span>Likes</span></a>
+					<a href="#">Cart</a>
+				</div>
+			</div>
+			<div class="closeHam">&#x2715;</div>
+		</div>
 		<header>
 			<div class="header">
+				<img class="hamBtn" src="./img/burger.svg">
 				<a href="/index.html" class="header__logo">
 					<img src="./img/logo.svg" alt="">
 				</a>
@@ -42,6 +63,32 @@
 					<h1>LIVE AUCTIONS</h1>
 				</div>
 				<div class="content__auctions">
+					<div class="content__auctions__categoriesMobile">
+						<img src="./img/burger.svg" alt="">
+						<div class="dropMenu">
+							<ul>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+								<li>category</li>
+							</ul>
+						</div>
+						<span>Choose category</span>
+						<button>Find</button>
+					</div>
+					<div class="sortMobile">
+						<span>Results found:</span>
+						<img src="./img/sort.svg" alt="" class="sort">
+					</div>
 					<div class="content__auctions__categories">
 						<div class="content__auctions__categories__ctg">
 							<ul>
@@ -240,6 +287,22 @@
 				</div>
 			</div>
 		</div>
+		<div class="blur">
+			<form name="login" class="login">
+				<div class="login__title">Login</div>
+				<div class="login__info">
+					<input placeholder="Email">
+					<input placeholder="Password">
+					<div class="login__options">
+						<div class="login__option">New to this site?</div>
+						<div class="login__option">Forgot password?</div>
+					</div>
+				</div>
+				
+				<button>Login</button>
+			</form>
+		</div>
+		
 		<footer></footer>
 	</body>
 </html>

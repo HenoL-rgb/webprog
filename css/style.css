@@ -1,5 +1,6 @@
 @import url("./header.css");
 @import url("./footer.css");
+@import url("./modal.css");
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +11,40 @@ body {
   min-height: 100vh;
 }
 
-.popupMenu {
-  transform: translateY(40px);
-  scale: 1;
-  width: 70px;
+.hamburger {
+  position: absolute;
+  background-color: #f0f2f2;
+  width: 400px;
+  padding: 60px 30px;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-400px);
+  z-index: 4;
+  visibility: hidden;
+  transition: 0.2s all;
+}
+.hamburger.active {
+  visibility: visible;
+  transform: translateX(0px);
+}
+.hamburger__links {
+  display: flex;
+  flex-direction: column;
+  font-family: "IBM Plex sans";
+  row-gap: 30px;
+}
+.hamburger__links a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+.hamburger__links a:hover {
+  border-bottom: 1px solid #262626;
+}
+.hamburger .closeHam {
+  position: absolute;
+  top: 15px;
+  right: 25px;
 }
 
 .container {
@@ -34,6 +65,16 @@ body {
 .content__auctions {
   display: grid;
   grid-template-columns: 200px 1fr 200px;
+}
+.content__auctions__categoriesMobile {
+  display: none;
+}
+.content__auctions__categoriesMobile .dropMenu {
+  scale: 0;
+  display: none;
+}
+.content__auctions .sortMobile {
+  display: none;
 }
 .content__auctions__categories {
   font-family: "Montserrat", "sans-serif";
@@ -184,4 +225,289 @@ body {
   font-family: "Montserrat Light", sans-serif;
   color: #590B0B;
   font-size: 34px;
+}
+
+.hamBtn {
+  position: absolute;
+  scale: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .hamburger .userLinks {
+    display: none;
+  }
+  .header {
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: 3fr 4fr 1fr 1fr 1fr;
+  }
+  .header .hamBtn {
+    position: relative;
+    scale: 1;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__logo {
+    justify-self: center;
+  }
+  .header__searchBox {
+    justify-self: center;
+  }
+  .header__userLinks {
+    display: flex;
+    justify-content: flex-end;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .header__searchBox {
+    justify-self: end;
+    display: grid;
+    align-items: center;
+    position: relative;
+  }
+  .header__searchBox__searchInput {
+    display: none;
+  }
+  .header__searchBox__searchBtn {
+    border: 1px solid rgba(26, 26, 26, 0.15);
+  }
+  .content {
+    padding-top: 125px;
+  }
+  .content__title {
+    display: none;
+  }
+  .content__auctions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .content__auctions__categories, .content__auctions__topUsers {
+    display: none;
+  }
+  .content__auctions__categoriesMobile {
+    padding: 20px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 46px 1fr -webkit-min-content;
+    grid-template-columns: 46px 1fr min-content;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    font-family: "IBM Plex sans";
+    align-items: center;
+    border: 1px solid rgba(26, 26, 26, 0.15);
+    border-radius: 15px;
+  }
+  .content__auctions__categoriesMobile span {
+    justify-self: start;
+    font-size: 20px;
+  }
+  .content__auctions__categoriesMobile button {
+    width: 115px;
+    height: 35px;
+    justify-self: end;
+    background-color: #f22613;
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+  .content__auctions .sortMobile {
+    display: flex;
+    font-family: "IBM Plex sans";
+    font-size: 20px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  .content__auctions__cards {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .hamburger .userLinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .header {
+    padding: 0 30px;
+    height: 70px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .header .hamBtn {
+    position: relative;
+    scale: 1;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__userProfile {
+    height: 50px;
+    width: 50px;
+  }
+  .header__userProfile .popupMenu {
+    transform: translateY(60px);
+  }
+  .header__searchBox {
+    justify-self: center;
+  }
+  .header__userLinks {
+    display: none;
+  }
+  .header__searchBox {
+    display: none;
+  }
+  .content {
+    padding-top: 125px;
+  }
+  .content__title {
+    display: none;
+  }
+  .content__auctions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .content__auctions__categories, .content__auctions__topUsers {
+    display: none;
+  }
+  .content__auctions__categoriesMobile {
+    padding: 20px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 46px 1fr -webkit-min-content;
+    grid-template-columns: 46px 1fr min-content;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    font-family: "IBM Plex sans";
+    align-items: center;
+    border: 1px solid rgba(26, 26, 26, 0.15);
+    border-radius: 15px;
+  }
+  .content__auctions__categoriesMobile span {
+    justify-self: start;
+    font-size: 20px;
+  }
+  .content__auctions__categoriesMobile button {
+    width: 115px;
+    height: 35px;
+    justify-self: end;
+    background-color: #f22613;
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+  .content__auctions .sortMobile {
+    display: flex;
+    font-family: "IBM Plex sans";
+    font-size: 20px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  .content__auctions__cards {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+@media screen and (max-width: 440px) {
+  .hamburger .userLinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .header {
+    padding: 0 30px;
+    height: 70px;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+  }
+  .header .hamBtn {
+    position: relative;
+    scale: 1;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__userProfile {
+    height: 50px;
+    width: 50px;
+  }
+  .header__userProfile .popupMenu {
+    transform: translateY(60px);
+  }
+  .header__searchBox {
+    justify-self: center;
+  }
+  .header__userLinks {
+    display: none;
+  }
+  .header__searchBox {
+    display: none;
+  }
+  .content {
+    padding-top: 125px;
+  }
+  .content__title {
+    display: none;
+  }
+  .content__auctions {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  .content__auctions__categories, .content__auctions__topUsers {
+    display: none;
+  }
+  .content__auctions__categoriesMobile {
+    padding: 20px;
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 46px 1fr 90px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    font-family: "IBM Plex sans";
+    font-size: 20px;
+    align-items: center;
+    border: 1px solid rgba(26, 26, 26, 0.15);
+    border-radius: 15px;
+  }
+  .content__auctions__categoriesMobile span {
+    justify-self: start;
+  }
+  .content__auctions__categoriesMobile button {
+    width: 90px;
+    height: 35px;
+    justify-self: end;
+    background-color: #f22613;
+    color: #fff;
+    border: 0;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+  .content__auctions .sortMobile {
+    display: flex;
+    font-family: "IBM Plex sans";
+    font-size: 20px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  .content__auctions__cards {
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .content__auctions__cards__card img {
+    max-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .content__auctions__cards__card__content__text {
+    font-size: 18px;
+    padding: 0 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
