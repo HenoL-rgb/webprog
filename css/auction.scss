@@ -1,0 +1,149 @@
+@import url('./header.css');
+@import url('./footer.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 125px 0;
+    & .content {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+        row-gap: 40px;
+        padding: 50px;
+        border: 1px solid rgba(26,26,26,0.15);
+        border-radius: 15px;
+        &__mainImage {
+            & img {
+                width: 500px;
+                height: 450px;
+                border-radius: 15px;
+            }
+        }
+        &__auctionControllers {
+            max-width: 570px;
+            padding: 50px 0;
+            font-family: 'IBM Plex sans';
+            font-size: 20px;
+            display: grid;
+            place-items: center;
+            &__crntPrice {
+                width: 570px;
+                height: 70px;
+                padding: 20px 30px;
+                border: 1px solid rgba(26,26,26,0.15);
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                align-items: center;
+                border-radius: 15px;
+                & .price {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }  
+            }
+
+            &__yourBet {
+                width: 570px;
+                height: 70px;
+                padding: 20px 30px;
+                border: 1px solid rgba(26,26,26,0.15);
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                align-items: center;
+                border-radius: 15px;
+                & .price {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }  
+            }
+            &__expirationTime {
+                width: 570px;
+                height: 70px;
+                padding: 20px 30px;
+                border: 1px solid rgba(26,26,26,0.15);
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                align-items: center;
+                border-radius: 15px;
+                &__date {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            &__betBtn {
+                cursor: pointer;
+                height: 50px;
+                width: 150px;
+                font-size: 20px;
+                font-family: 'IBM Plex sans';
+                background-color: #F22613;
+                border: 0;
+                border-radius: 15px;
+                color: #fff;
+                justify-self: flex-start;
+                &:hover {
+                    background-color: #BF1E0F;
+                }
+                &:active {
+                    background-color: #F22613;
+                }
+            }
+        }
+        &__itemInfo {
+            max-width: 570px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            background-color: #f0f2f2;
+            border-radius: 15px;
+            padding: 20px;
+            font-family: 'IBM Plex sans';
+            &__title {
+                font-size: 20px;
+            }
+            &__field {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                column-gap: 15px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.pagination {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    font-family: 'IBM Plex sans', 'sans-serif';
+    & a {
+        text-decoration: none;
+        color: #262626;
+    }
+    &__arrow {
+        color: #F22613;
+    }
+}
+
+
+.h2title {
+    font-family: 'Montserrat';
+    color: #F22613;
+    font-size: 26px;
+}
+
+.h1title {
+    font-family: 'Montserrat Light', sans-serif;
+    color: #590B0B;
+    font-size: 34px;
+}

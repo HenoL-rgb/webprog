@@ -88,15 +88,16 @@
 .content__auctions__cards {
   display: grid;
   font-family: "IBM Plex sans";
-  grid-template-columns: repeat(auto-fill, 286px);
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
   justify-content: space-between;
   row-gap: 35px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
   padding: 0 88px;
 }
 .content__auctions__cards__card {
   border: 1px solid rgba(26, 26, 26, 0.15);
   border-radius: 15px;
-  max-width: 286px;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
@@ -106,6 +107,7 @@
 }
 .content__auctions__cards__card img {
   border-radius: 15px 15px 0 0;
+  width: 100%;
 }
 .content__auctions__cards__card__content {
   padding: 0px 10px 15px;
