@@ -1,120 +1,174 @@
+@import url("./header.css");
+@import url("./footer.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+.container {
   display: flex;
-  justify-content: center;
-  font-family: "IBM Plex sans";
-  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header {
-  position: relative;
-  display: grid;
-  width: 1610px;
-  grid-template-columns: 100px 1fr 2fr 150px 100px;
-  align-items: center;
-  height: 50px;
+.content {
+  width: min(1610px, 90%);
 }
-.header__links {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-  height: 100%;
-  justify-self: center;
-  align-items: center;
-  text-decoration: none;
-  list-style: none;
-  justify-content: space-between;
-  padding: 0px 35px;
-}
-.header__links a {
+.content__title {
+  height: 160px;
   display: flex;
-  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.content__auctions {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+}
+.content__auctions__categories {
+  font-family: "Montserrat", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.content__auctions__categories__ctg {
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  display: flex;
+  padding: 30px 20px;
+  border-radius: 15px;
+  justify-content: center;
+}
+.content__auctions__categories__ctg ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.content__auctions__categories__ctg ul li {
+  cursor: pointer;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: #262626;
+  font-size: 16px;
+  height: 25px;
+  list-style: none;
+  border-radius: 15px;
+  background-color: #f0f2f2;
 }
-.header__links a:hover {
+.content__auctions__categories__ctg ul li:hover {
+  background-color: #D81200;
+  color: #fff;
+}
+.content__auctions__categories__ctg ul li.active {
+  background-color: #F22613;
+  color: #fff;
+}
+.content__auctions__categories__region {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 20px;
+  align-items: center;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  border-radius: 15px;
+}
+.content__auctions__categories__region select {
+  font-family: "Montserrat Light", "sans-serif";
+  width: 100%;
+  outline: 0;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  height: 25px;
+  border-radius: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+.content__auctions__categories__region select:hover {
+  border: 1px solid #F22613;
+}
+.content__auctions__cards {
+  display: grid;
+  font-family: "IBM Plex sans";
+  grid-template-columns: repeat(auto-fill, 286px);
+  justify-content: space-between;
+  row-gap: 35px;
+  padding: 0 88px;
+}
+.content__auctions__cards__card {
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  border-radius: 15px;
+  max-width: 286px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.2s all ease-in-out;
+}
+.content__auctions__cards__card img {
+  border-radius: 15px 15px 0 0;
+}
+.content__auctions__cards__card__content {
+  padding: 0px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+}
+.content__auctions__cards__card__content__title {
+  font-size: 20px;
+}
+.content__auctions__cards__card__content__price {
+  font-family: "Montserrat";
   color: #F22613;
+  font-size: 24px;
 }
-.header__searchBox {
-  justify-self: end;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.content__auctions__cards__card:hover {
+  transform: translateY(-10px);
+}
+.content__auctions__topUsers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  padding: 10px 20px 20px;
+  border: 1px solid rgba(26, 26, 26, 0.15);
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  position: relative;
-}
-.header__searchBox__searchInput {
-  height: 30px;
-  width: 30px;
-  border-style: none;
-  padding: 10px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  outline: none;
   border-radius: 15px;
-  transition: all 0.5s ease-in-out;
-  background-color: transparent;
-  border: 1px solid rgba(26, 26, 26, 0.15);
-  padding-right: 20px;
-  color: #262626;
 }
-.header__searchBox__searchInput:hover {
-  border: 1px solid rgba(26, 26, 26, 0.5);
-}
-.header__searchBox__searchInput:focus {
-  width: 500px;
-  border: 1px solid #F22613;
+.content__auctions__topUsers__userCard {
+  padding: 10px 15px;
   border-radius: 15px;
-  padding: 10px 30px 10px 10px;
-  background-color: transparent;
-  transition: all 200ms ease-in-out;
-}
-.header__searchBox__searchBtn {
+  box-shadow: 0px 0px 4px rgba(26, 26, 26, 0.15);
+  font-family: "IBM Plex sans";
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  row-gap: 10px;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border-style: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 15px;
-  position: absolute;
-  right: 0px;
-  color: #262626;
-  background-color: transparent;
-  pointer-events: painted;
 }
-.header__searchBox__searchBtn:focus ~ .header__searchBox__searchInput {
-  width: 500px;
-  border-radius: 15px;
-  padding: 10px 30px 10px 10px;
-  background-color: transparent;
-  transition: all 200ms ease-in-out;
-}
-.header__userLinks {
-  justify-self: end;
+.content__auctions__topUsers__userCard__logo {
   display: flex;
-  padding-top: 5px;
-  height: 100%;
   align-items: center;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  width: 100%;
 }
-.header__userProfile {
-  justify-self: end;
-  background-color: #F22613;
-  width: 30px;
+.content__auctions__topUsers__userCard__logo .logo {
   height: 30px;
+  width: 30px;
+  background-color: #f22613;
   border-radius: 50%;
+}
+
+.h2title {
+  font-family: "Montserrat";
+  color: #F22613;
+  font-size: 26px;
+}
+
+.h1title {
+  font-family: "Montserrat Light", sans-serif;
+  color: #590B0B;
+  font-size: 34px;
 }/*# sourceMappingURL=style.css.map */

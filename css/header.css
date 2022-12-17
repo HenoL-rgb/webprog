@@ -1,0 +1,139 @@
+header {
+  display: flex;
+  justify-content: center;
+  font-family: "IBM Plex sans";
+  font-size: 18px;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  width: 1610px;
+  grid-template-columns: 100px 1fr 2fr 150px 100px;
+  align-items: center;
+  height: 50px;
+}
+.header__links {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0px 35px;
+}
+.header__links a {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #262626;
+}
+.header__links a:hover {
+  color: #F22613;
+}
+.header__searchBox {
+  justify-self: end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+.header__searchBox__searchInput {
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 15px;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  padding-right: 20px;
+  color: #262626;
+}
+.header__searchBox__searchInput:hover {
+  border: 1px solid rgba(26, 26, 26, 0.5);
+  width: 500px;
+  border-radius: 15px;
+  padding: 10px 30px 10px 10px;
+  background-color: transparent;
+}
+.header__searchBox__searchInput:focus {
+  width: 500px;
+  border: 1px solid #F22613;
+  border-radius: 15px;
+  padding: 10px 30px 10px 10px;
+  background-color: transparent;
+  transition: all 200ms ease-in-out;
+}
+.header__searchBox__searchBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 15px;
+  position: absolute;
+  right: 0px;
+  color: #262626;
+  background-color: transparent;
+  pointer-events: painted;
+}
+.header__searchBox__searchBtn:hover ~ .header__searchBox__searchInput {
+  width: 500px;
+  border-radius: 15px;
+  padding: 10px 30px 10px 10px;
+  background-color: transparent;
+  transition: all 200ms ease-in-out;
+}
+.header__userLinks {
+  justify-self: end;
+  display: flex;
+  padding-top: 5px;
+  height: 100%;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.header__userProfile {
+  position: relative;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  background-color: #F22613;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.header__userProfile .popupMenu {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #262626;
+  padding: 10px 15px;
+  background-color: #f0f2f2;
+  border-radius: 20px;
+  scale: 0;
+}
+.header__userProfile .popupMenu.active {
+  transform: translateY(40px);
+  scale: 1;
+  width: 70px;
+}/*# sourceMappingURL=header.css.map */
