@@ -8,7 +8,8 @@ header {
 .header {
     position: relative;
     display: grid;
-    width: 1610px;
+    width: 100%;
+    padding: 0 155px;
     grid-template-columns: 100px 1fr 2fr 150px 100px;
     align-items: center;
     height: 50px;
