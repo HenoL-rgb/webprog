@@ -87,13 +87,17 @@ body {
 .container .content__auctionControllers__inputs div {
   display: grid;
   grid-template-columns: 100px 1fr;
+  align-items: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
 }
 .container .content__auctionControllers__inputs input {
   outline: 0;
+  font-family: "IBM Plex sans";
+  font-size: 16px;
   border: 1px solid rgba(26, 26, 26, 0.15);
   border-radius: 15px;
+  padding: 5px 10px;
 }
 .container .content__itemInfo {
   max-width: 570px;
