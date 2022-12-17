@@ -1,0 +1,126 @@
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./pagination.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex-grow: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 125px 0;
+}
+
+.content {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+.content .pag {
+  font-family: "IBM Plex sans", "sans-serif";
+  font-size: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.content .pag .show {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.content .pag .show select {
+  cursor: pointer;
+  width: 50px;
+  font-family: "IBM Plex sans", "sans-serif";
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #262626;
+}
+.content .pag .icons {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.content .pag .icons .controls {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.content .pag .icons .view {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.content__cards {
+  display: grid;
+  font-family: "IBM Plex sans";
+  grid-template-columns: repeat(auto-fit, minmax(286px, 1fr));
+  justify-content: space-between;
+  row-gap: 35px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  padding: 0 88px;
+}
+.content__cards__card {
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.2s all ease-in-out;
+}
+.content__cards__card img {
+  padding: 5px;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+.content__cards__card__content {
+  padding: 0px 10px 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+}
+.content__cards__card__content__title {
+  font-size: 20px;
+}
+.content__cards__card__content__price {
+  font-family: "Montserrat";
+  color: #F22613;
+  font-size: 24px;
+}
+.content__cards__card:hover {
+  transform: translateY(-10px);
+}
+
+.h2title {
+  font-family: "Montserrat";
+  color: #F22613;
+  font-size: 26px;
+}
+
+.h1title {
+  font-family: "Montserrat Light", sans-serif;
+  color: #590B0B;
+  font-size: 34px;
+}/*# sourceMappingURL=search.css.map */

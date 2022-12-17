@@ -8,7 +8,15 @@ list.forEach(item => {
 
 
 
+document.querySelector('.header__userProfile').addEventListener('click',function(e) {
+    document.querySelector('.popupMenu').classList.toggle('active');
 
+})
+
+document.querySelector('.popupMenu').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+});
 
 const auctions = document.querySelectorAll('.content__auctions__cards__card');
 
@@ -17,4 +25,11 @@ auctions.forEach(auction => {
     auction.addEventListener('click', function() {
         window.location.replace('auction.html');
     })
+})
+
+
+const searchBtn = document.querySelector('.header__searchBox__searchBtn');
+
+searchBtn.addEventListener('click', function() {
+    window.location.replace('./search.html')
 })
