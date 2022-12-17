@@ -1,0 +1,14 @@
+
+.pagination {
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    font-family: 'IBM Plex sans', 'sans-serif';
+    & a {
+        text-decoration: none;
+        color: #262626;
+    }
+    &__arrow {
+        color: #F22613;
+    }
+}

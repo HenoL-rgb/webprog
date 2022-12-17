@@ -1,0 +1,13 @@
+.pagination {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  font-family: "IBM Plex sans", "sans-serif";
+}
+.pagination a {
+  text-decoration: none;
+  color: #262626;
+}
+.pagination__arrow {
+  color: #F22613;
+}/*# sourceMappingURL=pagination.css.map */
