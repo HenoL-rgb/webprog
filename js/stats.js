@@ -11,13 +11,7 @@ const auctions = document.querySelectorAll('.content__topAuctionsContainer__card
 console.log(auctions);
 auctions.forEach(auction => {
     auction.addEventListener('click', function() {
-        window.location.replace('auction.html');
+        window.location.replace('auctionStat.html');
     })
 })
 
-
-
-document.querySelector('.header__userProfile').addEventListener('click',function(e) {
-    document.querySelector('.popupMenu').classList.toggle('active');
-
-})

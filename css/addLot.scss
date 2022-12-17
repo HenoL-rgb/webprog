@@ -1,0 +1,168 @@
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./pagination.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 2;
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 125px 0;
+    & .content {
+        max-width: 90%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(650px, 1fr));
+        row-gap: 40px;
+        padding: 50px;
+        border: 1px solid rgba(26,26,26,0.15);
+        border-radius: 15px;
+        &__mainImage {
+            & img {
+                width: 500px;
+                height: 450px;
+                border-radius: 15px;
+            }
+        }
+        &__auctionControllers {
+            max-width: 570px;
+            padding: 0 0;
+            font-family: 'IBM Plex sans';
+            font-size: 20px;
+            display: grid;
+            place-items: center;
+          
+            &__imagesList {
+                background-color: #f0f2f2;
+                padding: 10px;
+                &__container {
+                    display: flex;
+                    column-gap: 10px;
+                    max-width: 570px;
+                    & img {
+                        max-width: 200px;
+                        max-height: 200px;
+                    }
+                    overflow-x: scroll;
+                }
+                
+
+            }
+            &__uploadBtn {
+                cursor: pointer;
+                height: 50px;
+                margin-top: 15px;
+                width: 150px;
+                font-size: 20px;
+                font-family: 'IBM Plex sans';
+                background-color: #fff;
+                border: 1px solid rgba(26,26,26,0.15);
+                border-radius: 15px;
+                color: #262626;
+                justify-self: flex-start;
+                &:hover {
+                    color: #f22613
+                }
+                &:active {
+                    background-color: #F22613;
+                    color: #fff;
+                }
+            }
+            &__inputs {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 25px;
+                padding-top: 50px;
+                & div {
+                    display: grid;
+                    grid-template-columns: 100px 1fr;
+                    column-gap: 15px;
+                }
+                & input {
+                    outline: 0;
+                    border: 1px solid rgba(26,26,26,0.15);
+                    border-radius: 15px;
+                }
+
+            }
+        }
+        &__itemInfo {
+            max-width: 570px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            background-color: #f0f2f2;
+            border-radius: 15px;
+            padding: 20px;
+            font-family: 'IBM Plex sans';
+            &__title {
+                font-size: 20px;
+            }
+            &__field {
+                display: grid;
+                width: 100%;
+                grid-template-columns: min-content 1fr;
+                column-gap: 15px;
+                font-size: 18px;
+                &__info {
+                    & textarea {
+                        width: 100%;
+                        min-height: 300px;
+                        font-family: 'IBM Plex sans';
+                        font-size: 18px;
+                        border: 1px solid rgba(26,26,26,0.15);
+                        text-align: left;
+                        outline: 0;
+                        border-radius: 15px;
+                        padding: 10px;
+                        &:focus {
+                            border: 1px solid #F22613;
+                        }
+                    }
+                }
+            }
+            & .addField {
+                cursor: pointer;
+                border: 1px solid rgba(26,26,26,0.15);
+                max-width: 300px;
+                color: #262626;
+                padding: 15px 20px;
+                border-radius: 15px;
+                &:hover {
+                    color: #F22613;
+                }
+                &:active {
+                    background-color: #D81200;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+.h2title {
+    font-family: 'Montserrat';
+    color: #F22613;
+    font-size: 26px;
+}
+
+.h1title {
+    font-family: 'Montserrat Light', sans-serif;
+    color: #590B0B;
+    font-size: 34px;
+}

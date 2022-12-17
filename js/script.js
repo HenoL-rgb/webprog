@@ -8,14 +8,7 @@ list.forEach(item => {
 
 
 
-document.querySelector('.header__userProfile').addEventListener('click',function(e) {
-    document.querySelector('.popupMenu').classList.toggle('active');
 
-})
-
-document.querySelector('.popupMenu').addEventListener('click', function(e) {
-    console.log(e.target)
-});
 
 const auctions = document.querySelectorAll('.content__auctions__cards__card');
 

@@ -10,6 +10,12 @@ body {
   min-height: 100vh;
 }
 
+.popupMenu {
+  transform: translateY(40px);
+  scale: 1;
+  width: 70px;
+}
+
 .container {
   display: flex;
   flex-direction: column;

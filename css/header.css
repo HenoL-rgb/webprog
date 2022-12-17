@@ -132,8 +132,6 @@ header {
   background-color: #f0f2f2;
   border-radius: 20px;
   scale: 0;
-}
-.header__userProfile .popupMenu.active {
   transform: translateY(40px);
   scale: 1;
   width: 70px;

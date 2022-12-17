@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/auction.css">
-    <script defer src="./js/auction.js"></script>
+    <link rel="stylesheet" href="./css/addLot.css">
+    <script defer src="./js/addLot.js"></script>
     <title>Aucton</title>
 </head>
 <body>
@@ -50,48 +50,60 @@
                 <img src="./img/house.jpg">
             </div>
             <div class="content__auctionControllers">
-                <div class="content__auctionControllers__crntPrice">
-                    <span>Current price:</span>
-                    <span class="price h2title">999.999$</span>
+                <div class="content__auctionControllers__imagesList">
+                    <div class="content__auctionControllers__imagesList__container">
+                        <img src="./img/house.jpg">
+                        <img src="./img/house.jpg">
+                        <img src="./img/house.jpg">
+                        <img src="./img/house.jpg">
+                        <img src="./img/house.jpg">
+                    </div>
+                    
                 </div>
-                <div class="content__auctionControllers__yourBet">
-                    <span>Your bet:</span>
-                    <span class="price h2title">999.999$</span>
+                <button class="content__auctionControllers__uploadBtn">Upload</button>
+                <div class="content__auctionControllers__inputs">
+                   <div><label for="startTime">Start time</label><input id="startTime"></div>
+                   <div><label for="startPrice">Start price</label><input id="startPrice"></div>
+                   <div><label for="maxPrice">Max price</label><input id="maxPrice"></div>
+                   <div><label for="timeLimit">Time limit</label><input id="timeLimit"></div>
+                   <div><label for="Rate step">Rate step</label><input id="rateStep"></div>
                 </div>
-                <div class="content__auctionControllers__expirationTime">
-                    <span>Expiration time:</span>
-                    <span class="content__auctionControllers__expirationTime__date">10.10.2030</span>
-                </div>
-                <button class="content__auctionControllers__betBtn">Make bet</button>
             </div>
+
             <div class="content__itemInfo">
                 <div class="content__itemInfo__title">Item info:</div>
                     <div class="content__itemInfo__field">
                         <div class="content__itemInfo__field__title">field1</div>
                         <div class="content__itemInfo__field__info">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit 
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum."
+                            <textarea>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit 
+                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                occaecat cupidatat non proident, sunt in culpa qui officia 
+                                deserunt mollit anim id est laborum."
+                            </textarea>
+                            
                         </div>
                     </div>
                     <div class="content__itemInfo__field">
                         <div class="content__itemInfo__field__title">field2</div>
                         <div class="content__itemInfo__field__info">
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna 
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit 
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum."
+                            <textarea>
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit 
+                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                                occaecat cupidatat non proident, sunt in culpa qui officia 
+                                deserunt mollit anim id est laborum."
+                            </textarea>
                         </div>
                     </div>
+                    <button class="addField">Add field</button>
             </div>
             <div class="content__map">
                 <div class="mapouter">
