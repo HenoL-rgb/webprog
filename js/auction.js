@@ -7,8 +7,6 @@ searchBtn.addEventListener('click', function() {
 })
 
 
-const b = 'testgit';
-const test = 'dawawdawd'
 const form = document.querySelector('.blur');
 const login = document.querySelector('.login');
 const body = document.querySelector("body");
