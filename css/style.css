@@ -68,10 +68,43 @@ body {
 }
 .content__auctions__categoriesMobile {
   display: none;
+  position: relative;
 }
 .content__auctions__categoriesMobile .dropMenu {
   scale: 0;
   display: none;
+}
+.content__auctions__categoriesMobile .dropMenu.active {
+  display: block;
+  scale: 1;
+  position: absolute;
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  top: 70px;
+  transform: translate(15px, 0);
+}
+.content__auctions__categoriesMobile .dropMenu.active ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  font-family: "IBM Plex sans";
+  font-size: 18px;
+  padding: 20px 0;
+}
+.content__auctions__categoriesMobile .dropMenu.active ul li {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+}
+.content__auctions__categoriesMobile .dropMenu.active ul li.active {
+  background-color: #f22613;
+  color: #fff;
 }
 .content__auctions .sortMobile {
   display: none;

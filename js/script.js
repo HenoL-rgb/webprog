@@ -41,16 +41,23 @@ auctions.forEach(auction => {
 
 
 const searchBtn = document.querySelector('.header__searchBox__searchBtn');
+const hamBtn = document.querySelector('.hamBtn');
+const hamMenu = document.querySelector('.hamburger');
+const closeHam = document.querySelector('.closeHam');
+const logo = document.querySelector('.header__logo');
+const ctgBurger = document.querySelector('.content__auctions__categoriesMobile__burger');
+const dropMenu = document.querySelector('.dropMenu');
 
 searchBtn.addEventListener('click', function() {
     window.location.replace('./search.html')
 
 })
 
+ctgBurger.addEventListener('click', function() {
+    dropMenu.classList.toggle('active');
+})
 
-const hamBtn = document.querySelector('.hamBtn');
-const hamMenu = document.querySelector('.hamburger');
-const closeHam = document.querySelector('.closeHam');
+
 hamBtn.addEventListener('click', function(e) {
     hamMenu.classList.toggle('active');
     closeHam.addEventListener('click', function() {

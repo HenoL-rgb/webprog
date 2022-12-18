@@ -69,9 +69,40 @@ body {
         grid-template-columns: 200px 1fr 200px;
         &__categoriesMobile {
             display: none;
+            position: relative;
             & .dropMenu {
                 scale: 0;
                 display: none;
+                &.active {
+                    display: block;
+                    scale: 1;
+                    position: absolute;
+                    width: 400px;
+                    height: fit-content;
+                    background-color: #fff;
+                    border-radius: 0 0 15px 15px;
+                    top: 70px;
+                    transform: translate(15px,0);
+                    & ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 15px;
+                        align-items: center;
+                        font-family: 'IBM Plex sans';
+                        font-size: 18px;
+                        padding: 20px 0;
+                        & li {
+                            width: 100%;
+                            text-align: center;
+                            padding: 5px 0;
+                            &.active {
+                                background-color: #f22613;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
             }
         }
         & .sortMobile {

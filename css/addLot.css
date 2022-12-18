@@ -152,6 +152,25 @@ body {
   background-color: #D81200;
   color: #fff;
 }
+.container .content .review {
+  background-color: #D81200;
+  border: 0;
+  width: 300px;
+  color: #fff;
+  font-family: "IBM Plex sans";
+  font-size: 20px;
+  padding: 10px 0;
+  border-radius: 15px;
+  grid-column: span 2;
+  justify-self: center;
+  cursor: pointer;
+}
+.container .content .review:hover {
+  background-color: #Bf1e0f;
+}
+.container .content .review:active {
+  background-color: #D81200;
+}
 
 .h2title {
   font-family: "Montserrat";
