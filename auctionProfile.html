@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/auction.css">
+    <script defer src="./js/auction.js"></script>
+    <title>Aucton</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <a href="index.html" class="header__logo">
+                <img src="./img/logo.svg" alt="">
+            </a>
+            <div class="header__links">
+                <a href="stats.html">
+                    <div>Stats</div>
+                </a>
+                <a href="faq.html">
+                    <div>FAQ</div>
+                </a>
+                <a href="about.html">
+                    <div>About</div>
+                </a>
+            </div>
+            <div class="header__searchBox">
+                <button class="header__searchBox__searchBtn"><img src="./img/search.svg"></button>
+                <input type="text" class="header__searchBox__searchInput" placeholder="Type to Search...">
+            </div>
+            <div class="header__userLinks">
+                <a href="#"><img src="./img/heart.svg"></a>
+                <a href="#"><img src="./img/cart.svg"></a>
+            </div>
+            <a href="user.html" class="header__userProfile">
+                <div class="popupMenu">Login</div>
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <span class="pagination">
+            <a href="./index.html">Main</a>
+            <span class="pagination__arrow">></span>
+            <a href="./user.html">Profile</a>
+            <span class="pagination__arrow">></span>
+            <a href="./auctionStat.html">Auction</a>
+        </span>
+        <div class="content">
+            <div class="content__mainImage">
+                <img src="./img/house.jpg">
+            </div>
+            <div class="content__auctionControllers">
+                <div class="content__auctionControllers__crntPrice">
+                    <span>Current price:</span>
+                    <span class="price h2title">999.999$</span>
+                </div>
+                <div class="content__auctionControllers__yourBet">
+                    <span>Your bet:</span>
+                    <span class="price h2title">999.999$</span>
+                </div>
+                <div class="content__auctionControllers__expirationTime">
+                    <span>Expiration time:</span>
+                    <span class="content__auctionControllers__expirationTime__date">10.10.2030</span>
+                </div>
+                <button class="content__auctionControllers__betBtn">Make bet</button>
+            </div>
+            <div class="content__itemInfo">
+                <div class="content__itemInfo__title">Item info:</div>
+                    <div class="content__itemInfo__field">
+                        <div class="content__itemInfo__field__title">field1</div>
+                        <div class="content__itemInfo__field__info">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                            deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+                    <div class="content__itemInfo__field">
+                        <div class="content__itemInfo__field__title">field2</div>
+                        <div class="content__itemInfo__field__info">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
+                            occaecat cupidatat non proident, sunt in culpa qui officia 
+                            deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+            </div>
+            <div class="content__map">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                         src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=2880 Broadway, New York&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        </iframe>
+                    </div>
+                        <style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas 
+                        {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe 
+                        {width:570px!important;height:300px!important;}
+                        </style>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="blur">
+        <form name="login" class="login">
+            <div class="login__title">Login</div>
+            <div class="login__info">
+                <input placeholder="Email">
+                <input placeholder="Password">
+                <div class="login__options">
+                    <div class="login__option">New to this site?</div>
+                    <div class="login__option">Forgot password?</div>
+                </div>
+            </div>
+            
+            <button>Login</button>
+        </form>
+    </div>
+    
+    <footer></footer>
+
+</body>
+</html>

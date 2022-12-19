@@ -24,3 +24,12 @@ document.querySelector('.popupMenu').addEventListener('click', function(e) {
         form.classList.remove('active');
     })
 });
+
+const auctions = document.querySelectorAll('.content__userHistory__cards__card');
+
+console.log(auctions);
+auctions.forEach(auction => {
+    auction.addEventListener('click', function() {
+        window.location.replace('auctionProfile.html');
+    })
+})
