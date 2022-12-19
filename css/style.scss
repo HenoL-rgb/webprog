@@ -57,6 +57,7 @@ body {
 }
 
 .content {
+    cursor: default;
     width: min(1610px, 90%);
     &__title {
         height: 160px;
@@ -230,6 +231,7 @@ body {
                 row-gap: 10px;
                 align-items: center;
                 &__logo {
+                    cursor: pointer;
                     display: flex;
                     align-items: center;
                     column-gap: 15px;
