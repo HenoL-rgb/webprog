@@ -2,7 +2,7 @@ const list = document.querySelectorAll('li');
 const form = document.querySelector('.blur');
 const login = document.querySelector('.login');
 const body = document.querySelector("body");
-const userLogo = document.querySelectorAll('.content__auctions__topUsers__userCard__logo');
+const userLogo = document.querySelectorAll('.content__auctions__topUsers__userCard');
 
 userLogo.forEach(item => item.addEventListener('click', function() {
     window.location.replace('topUser.html')
